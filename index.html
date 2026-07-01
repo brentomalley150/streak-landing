@@ -461,13 +461,13 @@ footer { background: var(--ink); padding: 32px 24px; display: flex; flex-wrap: w
 <div class="cta-section" id="waitlist">
   <h2>Ready to build the streak<br>your kid won't break?</h2>
   <p>Join the waitlist and be the first to know when we open to more families and educators.</p>
-  <div class="waitlist-form">
-    <input class="waitlist-input" type="email" placeholder="your@email.com" id="email-input" />
-    <button class="waitlist-btn" onclick="handleWaitlist()">Join waitlist</button>
+  <div style="max-width:520px;margin:0 auto;">
+    <iframe data-tally-src="https://tally.so/embed/RGga9P?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+      loading="lazy" width="100%" height="300" frameborder="0" marginheight="0" marginwidth="0"
+      title="Launch for streak app" style="border-radius:12px;"></iframe>
   </div>
-  <div class="cta-note">No spam. Just one email when we're ready for you.</div>
-  <br>
-  <a href="https://beatthesummerslide.com/prototype.html" class="cta-prototype-link">Or explore the interactive prototype first →</a>
+  <div class="cta-note" style="margin-top:12px;">No spam. Just one email when we're ready for you.</div>
+  <a href="https://beatthesummerslide.com/prototype.html" class="cta-prototype-link" style="margin-top:20px;">Or explore the interactive prototype first →</a>
 </div>
 
 <footer>
@@ -480,24 +480,6 @@ footer { background: var(--ink); padding: 32px 24px; display: flex; flex-wrap: w
   <div class="footer-note">Design concept for a future landing page. Built by Brent O'Malley. Strategy &amp; product by Kate O'Malley. Powered by Claude.</div>
 </footer>
 
-<script>
-function handleWaitlist() {
-  const input = document.getElementById('email-input');
-  const email = input.value.trim();
-  if (!email || !email.includes('@')) {
-    input.style.outline = '2px solid #F97316';
-    input.focus();
-    return;
-  }
-  input.style.outline = 'none';
-  const btn = document.querySelector('.waitlist-btn');
-  btn.textContent = "✓ You're on the list!";
-  btn.style.background = '#ECFDF5';
-  btn.style.color = '#059669';
-  input.value = '';
-  input.placeholder = "Thanks! We'll be in touch.";
-  input.disabled = true;
-}
-</script>
+<script async src="https://tally.so/widgets/embed.js"></script>
 </body>
 </html>
